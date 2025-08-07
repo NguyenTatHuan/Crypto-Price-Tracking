@@ -1,15 +1,20 @@
 export const convertNumber = (number) => {
-    const numberWithCommas = number.toLocaleString();
-    var arr = numberWithCommas.split(",");
-    if (arr.length == 5) {
-        return arr[0] + "." + arr[1].slice(0, 2) + "T";
-    } else if (arr.length == 4) {
-        return arr[0] + "." + arr[1].slice(0, 2) + "B";
-    } else if (arr.length == 3) {
-        return arr[0] + "." + arr[1].slice(0, 2) + "M";
-    } else if (arr.length == 2) {
-        return arr[0] + "." + arr[1].slice(0, 2) + "K";
+    if (typeof number !== "number") return number;
+
+    const abs = Math.abs(number);
+    let formatted;
+
+    if (abs >= 1e12) {
+        formatted = (number / 1e12).toFixed(2) + "T";
+    } else if (abs >= 1e9) {
+        formatted = (number / 1e9).toFixed(2) + "B";
+    } else if (abs >= 1e6) {
+        formatted = (number / 1e6).toFixed(2) + "M";
+    } else if (abs >= 1e3) {
+        formatted = (number / 1e3).toFixed(2) + "K";
     } else {
-        return number.toLocaleString();
+        formatted = number.toString();
     }
+
+    return formatted;
 };
