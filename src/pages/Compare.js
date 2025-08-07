@@ -72,6 +72,7 @@ function Compare() {
                     getPrices(crypto1, days, priceType),
                     getPrices(newCrypto, days, priceType),
                 ]);
+                console.log("✅ Coin 2 selected:", data2?.name);
                 settingCoinObject(data2, setCoin2Data);
                 settingChartData(setChartData, prices1, prices2);
             } else {
@@ -81,6 +82,7 @@ function Compare() {
                     getPrices(newCrypto, days, priceType),
                     getPrices(crypto2, days, priceType),
                 ]);
+                console.log("✅ Coin 1 selected:", data1?.name);
                 settingCoinObject(data1, setCoin1Data);
                 settingChartData(setChartData, prices1, prices2);
             }

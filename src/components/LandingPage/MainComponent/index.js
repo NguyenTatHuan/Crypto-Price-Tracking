@@ -10,8 +10,8 @@ function MainComponent() {
         try {
             await navigator.share({
                 title: "CryptoTracker.",
-                text: "CryptoDashboard made by Avi Vashishta using React JS.",
-                url: "https://crypto-dashboard-jan.netlify.app",
+                text: "CryptoDashboard using React JS in 2025.",
+                url: "https://crypto-price-tracking-sandy.vercel.app",
             });
         } catch (error) {
             console.error("Error:", error);
