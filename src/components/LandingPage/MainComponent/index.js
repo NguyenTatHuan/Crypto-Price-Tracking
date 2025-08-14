@@ -9,7 +9,7 @@ function MainComponent() {
     const shareData = {
         title: "CryptoTracker.",
         text: "CryptoDashboard using React JS in 2025.",
-        url: "https://crypto-price-tracking-sandy.vercel.app",
+        url: "https://crypto-price-tracking-peach.vercel.app",
     };
 
     const handleShare = async () => {
