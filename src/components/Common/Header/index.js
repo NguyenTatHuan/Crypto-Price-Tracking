@@ -2,9 +2,11 @@ import React, { useEffect, useState, useContext } from "react";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
 import "./styles.css";
-import Switch from "@mui/material/Switch";
+import { IconButton } from "@mui/material";
 import { Select, MenuItem, FormControl } from "@mui/material";
 import { CurrencyContext } from "../../../context/CurrencyContext";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 function Header() {
   const { currency, setCurrency } = useContext(CurrencyContext);
@@ -57,7 +59,6 @@ function Header() {
         </h1>
       </a>
       <div className="links">
-        <Switch checked={darkMode} onClick={() => changeMode()} />
         <FormControl size="small" sx={{ minWidth: 100 }}>
           <Select value={currency.name} onChange={handleCurrencyChange}>
             <MenuItem value="usd">USD</MenuItem>
@@ -76,9 +77,15 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
+        <a href="/prediction">
+          <p className="link">Prediction</p>
+        </a>
         <a href="/dashboard">
           <Button text={"dashboard"} />
         </a>
+        <IconButton onClick={changeMode}>
+          {darkMode ? <LightModeIcon style={{ color: "var(--blue)" }} /> : <DarkModeIcon style={{ color: "var(--blue)" }} />}
+        </IconButton>
       </div>
       <div className="drawer-component">
         <TemporaryDrawer />

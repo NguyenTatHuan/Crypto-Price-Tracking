@@ -3,6 +3,8 @@ import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { IconButton, Switch, Select, MenuItem, FormControl } from "@mui/material";
 import { CurrencyContext } from "../../../context/CurrencyContext";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 export default function TemporaryDrawer() {
     const { currency, setCurrency } = useContext(CurrencyContext);
@@ -50,6 +52,9 @@ export default function TemporaryDrawer() {
 
     return (
         <div>
+            <IconButton onClick={changeMode}>
+                {darkMode ? <LightModeIcon style={{ color: "var(--blue)" }} /> : <DarkModeIcon style={{ color: "var(--blue)" }} />}
+            </IconButton>
             <IconButton onClick={() => setOpen(true)}>
                 <MenuRoundedIcon className="link" />
             </IconButton>
@@ -64,10 +69,12 @@ export default function TemporaryDrawer() {
                     <a href="/watchlist">
                         <p className="link">Watchlist</p>
                     </a>
+                    <a href="/prediction">
+                        <p className="link">Prediction</p>
+                    </a>
                     <a href="/dashboard">
                         <p className="link">Dashboard</p>
                     </a>
-                    <Switch checked={darkMode} onClick={() => changeMode()} />
                     <FormControl fullWidth size="small" sx={{ mt: 2 }}>
                         <Select value={currency.name} onChange={handleCurrencyChange}>
                             <MenuItem value="usd">USD</MenuItem>

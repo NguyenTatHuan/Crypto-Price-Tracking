@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Prediction from "./pages/Prediction";
 
 function App() {
   const theme = createTheme({
@@ -29,6 +30,7 @@ function App() {
             <Route path="/coin/:id" element={<Coin />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/prediction" element={<Prediction />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
