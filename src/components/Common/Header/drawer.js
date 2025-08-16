@@ -76,7 +76,25 @@ export default function TemporaryDrawer() {
                         <p className="link">Dashboard</p>
                     </a>
                     <FormControl fullWidth size="small" sx={{ mt: 2 }}>
-                        <Select value={currency.name} onChange={handleCurrencyChange}>
+                        <Select
+                            value={currency.name}
+                            onChange={handleCurrencyChange}
+                            sx={{
+                                height: "2.5rem",
+                                color: "var(--white)",
+                                "& .MuiOutlinedInput-notchedOutline": {
+                                    borderColor: "var(--white)",
+                                },
+                                "& .MuiSvgIcon-root": {
+                                    color: "var(--white)",
+                                },
+                                "&:hover": {
+                                    "&& fieldset": {
+                                        borderColor: "#3a80e9",
+                                    },
+                                },
+                            }}
+                        >
                             <MenuItem value="usd">USD</MenuItem>
                             <MenuItem value="eur">EUR</MenuItem>
                             <MenuItem value="vnd">VND</MenuItem>
