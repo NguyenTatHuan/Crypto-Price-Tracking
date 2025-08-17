@@ -64,7 +64,7 @@ function Prediction() {
             });
             if (!response.ok) throw new Error("Failed to fetch predictions");
             const data = await response.json();
-            setPredictions(data.predictions || {});
+            setPredictions(data);
         } catch (err) {
             console.error(err);
             setError(true);
@@ -88,7 +88,7 @@ function Prediction() {
             {predictions && !loading && (
                 <div className="chart-wrapper">
                     <LineChartPredict
-                        predictData={{ coin_id: crypto, predictions }}
+                        predictData={predictions}
                         chartLoading={loading}
                         currency={currency}
                     />
