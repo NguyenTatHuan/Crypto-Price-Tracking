@@ -36,7 +36,7 @@ function LineChartPredict({ predictData, currency, chartLoading }) {
         labels,
         datasets: [
             {
-                label: `${predictData.coin_id}`,
+                label: `${predictData.coin_name}`,
                 data: dataValues,
                 borderColor: "#3a80e9",
                 backgroundColor: "rgba(58, 128, 233,0.1)",
