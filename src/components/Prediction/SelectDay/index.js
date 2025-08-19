@@ -25,10 +25,10 @@ function SelectDay({ days, handleDaysChange, noPTag }) {
                 }}
             >
                 <MenuItem value={1}>1 Days</MenuItem>
+                <MenuItem value={7}>7 Days</MenuItem>
                 <MenuItem value={14}>14 Days</MenuItem>
                 <MenuItem value={30}>30 Days</MenuItem>
                 <MenuItem value={90}>90 Days</MenuItem>
-                <MenuItem value={180}>180 Days</MenuItem>
                 <MenuItem value={365}>1 Year</MenuItem>
             </Select>
         </div>
