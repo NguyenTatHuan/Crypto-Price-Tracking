@@ -69,9 +69,6 @@ export default function TemporaryDrawer() {
                     <a href="/watchlist">
                         <p className="link">Watchlist</p>
                     </a>
-                    <a href="/prediction">
-                        <p className="link">Prediction</p>
-                    </a>
                     <a href="/dashboard">
                         <p className="link">Dashboard</p>
                     </a>
