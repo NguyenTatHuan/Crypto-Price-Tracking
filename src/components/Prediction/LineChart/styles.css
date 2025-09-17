@@ -1,9 +1,0 @@
-.chart-container {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-}
-
-.chart-container.loading {
-    opacity: 0.4;
-    pointer-events: none;
-}
