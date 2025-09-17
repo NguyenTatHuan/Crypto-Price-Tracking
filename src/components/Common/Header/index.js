@@ -95,9 +95,6 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
-        <a href="/prediction">
-          <p className="link">Prediction</p>
-        </a>
         <a href="/dashboard">
           <Button text={"dashboard"} />
         </a>
